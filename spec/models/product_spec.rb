@@ -14,5 +14,9 @@ RSpec.describe Product, type: :model do
   describe 'uniqueness validations' do
     it { is_expected.to validate_uniqueness_of(:name) }
   end
+
+  describe 'associations' do
+    it { is_expected.to have_many(:product_descounts) }
+  end
 end
 
