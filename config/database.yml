@@ -1,0 +1,14 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: db_dev
+  password: db_dev
+  host: 127.0.0.1
+
+development:
+  <<: *default
+  database: agendakids_development
+test:
+  <<: *default
+  database: agendakids_test
