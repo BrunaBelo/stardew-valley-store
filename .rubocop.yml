@@ -134,7 +134,7 @@ Metrics/MethodLength:
 ################################################################################
 
 RSpec/AggregateExamples:
-  Enabled: true
+  Enabled: false
   Include:
     - spec/**/*_spec.rb
 
