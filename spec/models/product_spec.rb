@@ -17,6 +17,8 @@ RSpec.describe Product, type: :model do
 
   describe 'associations' do
     it { is_expected.to have_many(:product_descounts) }
+    it { is_expected.to have_many(:categories) }
+    it { is_expected.to have_many(:product_categories) }
   end
 end
 
