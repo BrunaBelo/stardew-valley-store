@@ -7,6 +7,10 @@ FactoryBot.define do
     document_number { CPF.generate }
     email { Faker::Internet.email }
     password { 'asdf1234' }
+
+    trait :with_purchases do
+      before(:create) { |user| create(:purchase, user: user) }
+    end
   end
 end
 

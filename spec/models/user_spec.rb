@@ -23,5 +23,9 @@ RSpec.describe User, type: :model do
     it { is_expected.to validate_length_of(:document_number) }
     it { is_expected.to validate_length_of(:phone_number) }
   end
+
+  describe 'associations' do
+    it { is_expected.to have_many(:purchases) }
+  end
 end
 
